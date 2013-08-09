@@ -1,10 +1,6 @@
 # Marcelo's Personal Site
 
-My personal website at http://marcelom.github.io/
-
-----
-
-This is the data for my personal blog.
+This is the data for my personal site at http://marcelom.github.io/.
 
 It is automatically transformed by [Jekyll](http://jekyllrb.com/) into a static site whenever I push code to this git repository.
 
