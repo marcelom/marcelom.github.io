@@ -2,7 +2,7 @@
 layout: default
 title: About Me
 author: "Marcelo Moreira"
-summary: (Almost) All about me...
+excerpt: (Almost) All about me...
 date: 2013-05-22
 ---
 
