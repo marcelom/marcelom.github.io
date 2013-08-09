@@ -3,9 +3,10 @@ layout: default
 title: About Me
 author: "Marcelo Moreira"
 summary: (Almost) All about me...
+date: 2013-05-22
 ---
 
-My name is Marcelo Moreira and I am the IT Infrastructure Manager (Systems & Networks) for [Stanford University](http://www.stanford.edu)'s [LBRE](http://lbre.stanford.edu) Department.
+My name is Marcelo Moreira and I am an IT professional. I have worked for many companies, including [Stanford University](http://www.stanford.edu)'s. Here is my [Resume](not.sure.where.to.put.it).
 
 If you're reading this, you're probably a friend whom I somehow managed to trick or coerced into giving me some page hits ;-)
 
