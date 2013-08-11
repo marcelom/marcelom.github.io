@@ -1,7 +1,10 @@
-Title: Postfix Encrypted SMTP
-Tags: Postfix, SMTP
-Author: Marcelo Moreira
-Summary: Enabling encrypted SMTP on postfix
+---
+layout: post
+title: Postfix Encrypted SMTP
+tags: Postfix, SMTP
+author: Marcelo Moreira
+excerpt: Enabling encrypted SMTP on postfix
+---
 
 As many of you know, the email servers at Stanford will only accept encrypted connections, starting June 24th, 2010.
 
