@@ -1,13 +1,55 @@
 ---
 layout: default
-title: Your New Jekyll Site
+title: Marcelo's personal page @ marcelom.github.io
 ---
 
 <div id="home">
-  <h1>Blog Posts</h1>
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
+	<h1>Blog Posts</h1>
+	<ul class="posts">
+		{% for post in site.posts %}
+		<li>
+			<span>{{ post.date | date_to_string }}</span> &bull; <a href="{{ post.url }}">{{ post.title }}</a>
+		</li>
+		{% endfor %}
+	</ul>
+
+	<!--
+	<h1>Highlighted Talks</h1>
+	<ul class="posts">
+	<li>
+	<span>dd mmm yyyy</span> &bull; <a href="#">Talk 1</a>
+	</li>
+	<li>
+	<span>dd mmm yyyy</span> &bull; <a href="#">Talk 2</a>
+	</li>
+	<li>
+	<span>dd mmm yyyy</span> &bull; <a href="#">Talk 3</a>
+	</li>
+	</ul>
+	-->
+
+	<!--
+	<h1>Other Interviews, Talks, Etc</h1>
+	<ul class="posts">
+	<li>
+	<span>dd mmm yyyy</span> &bull; <a href="#">Other 1</a>
+	</li>
+	<li>
+	<span>dd mmm yyyy</span> &bull; <a href="#">Other 2</a>
+	</li>
+	<li>
+	<span>dd mmm yyyy</span> &bull; <a href="#">Other 3</a>
+	</li>
+	</ul>
+	-->
+
+	<h1>Links</h1>
+	<ul class="posts">
+		<li>
+			<a href="http://www.stanford.edu/~marcelom/tools">Tools:</a> Antivirus remover, Tcpview, Procexplorer, etc &mdash; (protected).
+		</li>
+		<li>
+			<a href="http://www.stanford.edu">Stanford:</a> Stanford University's main website.
+		</li>
+	</ul>
 </div>

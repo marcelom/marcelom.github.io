@@ -1,47 +1,50 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>{{ page.title }}</title>
-        <meta name="viewport" content="width=device-width">
-
-        <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="/css/syntax.css">
-
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="/css/main.css">
-
-    </head>
-    <body>
-
-        <div class="container">
-          <div class="site">
-            <div class="header">
-              <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-              <a class="extra" href="/">Home</a>
-              <a class="extra" href="/aboutme.html">About Me</a>
-            </div>
-
-                {{ content }}
-
-            <div class="footer">
-              <div class="contact">
-                <p>
-                  Your Name<br />
-                  What You Are<br />
-                  your@email.com
-                </p>
-              </div>
-              <div class="contact">
-                <p>
-                  <a href="http://github.com/yourusername/">github.com/yourusername</a><br />
-                  <a href="http://twitter.com/yourusername/">twitter.com/yourusername</a><br />
-                </p>
-              </div>
-            </div>
-          </div>
-        </div> <!-- /container -->
-
-    </body>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<link href="{{ site.url }}/atom.xml" type="application/atom+xml" rel="alternate" title="{{ site.name }} Atom Feed" />
+		<title>{{ page.title }}</title>
+		<meta name="author" content="{{site.author}}" />
+		<link rel="stylesheet" type="text/css" href="/css/zenburn.css" />
+		<link rel="stylesheet" type="text/css" media="screen, projection" href="/css/screen.css" />
+		<link rel="shortcut icon" type="image/x-icon" href="{{site.url}}/favicon.ico" />
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	</head>
+	<body>
+		<div class="site">
+			<div class="title">
+				<a href="/">{{site.name}}</a>
+				<a class="extra" href="/" title="Take me home !">Home</a>
+				<a class="extra" href="/aboutme.html" title="Find out how irrelevant I am...">About Me</a>
+			</div>
+			{{ content }}
+			<div class="footer">
+				<div class="contact">
+					<p>
+						&copy; <a href="/aboutme.html">Marcelo Moreira</a>, under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>.
+						<br />
+						Site powered by <a href="http://jekyllrb.com/">Jekyll</a> &amp; <a href="http://pages.github.com//">Github Pages</a>. Fork me on <a href="https://github.com/marcelom/websites">Github</a>.
+						<br />
+						Template based on <a href="http://github.com/mojombo/jekyll">Jekyll</a> source of <a href="http://tom.preston-werner.com/">http://tom.preston-werner.com/</a>.
+					</p>
+				</div>
+			</div>
+		</div>
+		{% if site.github_url %}
+		<a href="{{ site.github_url }}"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
+		{% endif %}
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-9995379-5']);
+			_gaq.push(['_trackPageview']);
+			(function() {
+				var ga = document.createElement('script');
+				ga.type = 'text/javascript';
+				ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+	</body>
 </html>
