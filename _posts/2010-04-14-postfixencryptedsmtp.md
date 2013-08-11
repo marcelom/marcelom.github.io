@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Postfix Encrypted SMTP
-tags: Postfix, SMTP
+tags: Postfix SMTP
 author: Marcelo Moreira
 excerpt: Enabling encrypted SMTP on postfix
 ---
