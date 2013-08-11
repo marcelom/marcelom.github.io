@@ -513,7 +513,7 @@ cifs setup -w 192.168.20.2  -w 192.168.30.2 -security unix  -cp 437
 
 # one way mapping
 *\lys	=> lks
-NETAPP\administrator <= unixhost:root
+NETAPP\administrator <= unixhost:root 
 
 # two way mapping
 WINDOM\tinh	tin
