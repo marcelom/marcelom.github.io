@@ -1,8 +1,10 @@
-Title: Go Slice Shuffle
-Tags: golang python rand
-Author: Marcelo Moreira
-Summary: How to perform a shuffle on a slice in Go
-
+---
+layout: post
+title: Go Slice Shuffle
+tags: golang python rand
+author: Marcelo Moreira
+excerpt: How to perform a shuffle on a slice in Go
+---
 I am porting some Python code to [Go](http://golang.org/), and I needed to perform a in-place slice (array) shuffle. I was surprised to discover that there is none !!!
 
 Basically, I wanted something like this in Python:

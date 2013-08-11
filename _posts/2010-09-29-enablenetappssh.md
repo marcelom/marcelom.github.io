@@ -1,7 +1,10 @@
-Title: Enabling SSH on a Netapp filer
-Tags: Netapp
-Author: Marcelo Moreira
-Summary: How to enable ssh on the netapp filer
+---
+layout: post
+title: Enabling SSH on a Netapp filer
+tags: Netapp
+author: Marcelo Moreira
+excerpt: How to enable ssh on the netapp filer
+---
 
 This article is a draft, and needs major rework...
 

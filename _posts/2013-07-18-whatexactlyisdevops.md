@@ -1,8 +1,10 @@
-Title: So... What Exactly is DevOps ?!
-Tags: devops management
-Author: Marcelo Moreira
-Summary: What is DevOps ? (Second out of three articles in the "Beginning of DevOps" series)
-
+---
+layout: post
+title: So... What Exactly is DevOps ?!
+tags: devops management
+author: Marcelo Moreira
+excerpt: What is DevOps ? (Second out of three articles in the "Beginning of DevOps" series)
+---
 I have come across this article from O’Reilly, but only recently was able to finally read it. The article is entitled “What is DevOps?” and can be found [here](http://radar.oreilly.com/2012/06/what-is-devops.html).
 
 I confess that I enjoyed very much that reading. It is succinct and direct to the point. It is also very concise and well put.

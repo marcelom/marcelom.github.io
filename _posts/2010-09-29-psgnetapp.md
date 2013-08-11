@@ -1,7 +1,10 @@
-Title: Pocket Survival Guide: Netapp
-Tags: Pocket Survival Guide, Netapp
-Author: Marcelo Moreira
-Summary: PSG for Netapp: Dont leave home without it...
+---
+layout: post
+title: "Pocket Survival Guide: Netapp"
+tags: "Pocket Survival Guide" Netapp
+author: Marcelo Moreira
+excerpt: "PSG for Netapp: Dont leave home without it..."
+---
 
 This article is a draft, and needs amjor rework...
 

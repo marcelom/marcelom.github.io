@@ -1,8 +1,10 @@
-Title: Run `cmd.exe` as another user
-Tags: Windows
-Author: Marcelo Moreira
-Summary: How to get a command line in windows as another user
-
+---
+layout: post
+title: Run `cmd.exe` as another user
+tags: Windows
+author: Marcelo Moreira
+excerpt: How to get a command line in windows as another user
+---
 Sometimes you need to run command line commands as another user.
 
 I just ran into this the other day, and even thought it is a windows trick, I thought it was worth documenting.

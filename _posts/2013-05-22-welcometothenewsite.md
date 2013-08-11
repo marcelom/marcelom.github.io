@@ -1,8 +1,10 @@
-Title: Welcome To My New Site
-Tags: Python, Pelican
-Author: Marcelo Moreira
-Summary: Welcome to my new site !
-
+---
+layout: post
+title: Welcome To My New Site
+tags: Pelican Python
+author: Marcelo Moreira
+excerpt: Welcome to my new site !
+---
 Welcome to the new Marcelo@Stanford site !!!
 
 I have finally migrated from my old and outdated Wiki site.

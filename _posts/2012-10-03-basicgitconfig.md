@@ -1,8 +1,10 @@
-Title: Basic git configuration
-Tags: git
-Author: Marcelo Moreira
-Summary: How to make some basic git configurations to make life easier...
-
+---
+layout: post
+title: Basic git configuration
+tags: git
+author: Marcelo Moreira
+excerpt: How to make some basic git configurations to make life easier...
+---
 There are a few things that we can do to increase the usability of git.
 
 This is my basic git config:

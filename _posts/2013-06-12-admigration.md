@@ -1,8 +1,10 @@
-Title: AD Migration
-Tags: AD
-Author: Marcelo Moreira
-Summary: How we migrated from our own domain into Stanford's SU
-
+---
+layout: post
+title: AD Migration
+tags: AD
+author: Marcelo Moreira
+excerpt: How we migrated from our own domain into Stanford's SU
+---
 The department I work for is one of a few that has its own AD subdomain from Stanford's Win domain.
 
 Several reasons made us move away from it, including:

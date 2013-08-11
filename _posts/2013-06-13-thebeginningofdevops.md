@@ -1,8 +1,10 @@
-Title: The Hacker Way... The Beginning of DevOps
-Tags: devops management
-Author: Marcelo Moreira
-Summary: The Beginning of DevOps (first out of three articles in the series)
-
+---
+layout: post
+title: The Hacker Way... The Beginning of DevOps
+tags: devops management
+author: Marcelo Moreira
+excerpt: The Beginning of DevOps (first out of three articles in the series)
+---
 It is no big secret that I have actively trying to implement a DevOps culture into the workplace.
 
 Things change and the definitive way to stay successful is to embrace these changes, and change with it. That is how things have been done right under our very own eyes for millions of years (Evolution ?!).

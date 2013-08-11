@@ -1,7 +1,10 @@
-Title: VMware Tools on Ubuntu
-Tags: Vmware, Vmware Tools, Ubuntu
-Author: Marcelo Moreira
-Summary: Installing VMware Tools on Ubuntu
+---
+layout: post
+title: VMware Tools on Ubuntu
+tags: Vmware "Vmware Tools" Ubuntu
+author: Marcelo Moreira
+excerpt: Installing VMware Tools on Ubuntu
+---
 
 VMware provide packages for Ubuntu on packages.vmware.com. The install procedure is documented in [VMware Tools Installation Guide: Operating System Specific Packages](http://www.vmware.com/pdf/osp_install_guide.pdf).
 
