@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: About Me
 author: "Marcelo Moreira"
 excerpt: (Almost) All about me...
