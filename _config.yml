@@ -3,4 +3,5 @@ url: http://marcelom.github.io
 github_url: https://github.com/marcelom/marceloatstanford
 pygments: true
 author: Marcelo Moreira
+permalink: /:year/:month/:day/:title.html
 
