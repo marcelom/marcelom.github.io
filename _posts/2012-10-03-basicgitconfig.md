@@ -9,7 +9,7 @@ There are a few things that we can do to increase the usability of git.
 
 This is my basic git config:
 
-{% highlight console %}
+{% highlight shell-session %}
 git config --global color.ui auto
 git config --global user.email myemail@company.com
 git config --global user.name Marcelo
