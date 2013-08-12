@@ -5,3 +5,4 @@ pygments: true
 author: Marcelo Moreira
 permalink: /:year/:month/:day/:title.html
 exclude: [ README.md ]
+pygments: true
