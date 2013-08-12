@@ -10,7 +10,8 @@ This article is a draft, and needs major rework...
 
 ---------
 
-	[remote-mgr::root:/root]# ssh 192.168.15.200
+{% highlight console %}
+[remote-mgr::root:/root]# ssh 192.168.15.200
 	ssh: connect to host 192.168.15.200 port 22: Connection refused
 	
 	[remote-mgr::root:/root]# telnet 192.168.15.200
@@ -130,3 +131,4 @@ This article is a draft, and needs major rework...
 	filer01>
 	filer01> Connection to 192.168.15.200 closed by remote host.
 Connection to 192.168.15.200 closed.
+{% endhighlight %}
