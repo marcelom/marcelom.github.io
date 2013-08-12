@@ -25,13 +25,13 @@ I first migrated the OU structure from our domain into the newly created OU insi
 
 I dumped all the OU structure using the following command
 
-{% highlight %}
+{% highlight console %}
 dsquery ou "our root OU (change it to yours here)" -d fac.win.stanford.edu -limit 0
 {% endhighlight %}
 
 That provided me a list of all teh OUs that needed to be migrated. I ran them through this python script:
 
-{% highlight python%}
+{% highlight python %}
 a = []
 for line in sys.stdin:
   a.append(line.strip().replace('OU=LBRE,DC=fac','OU=LBRE,DC=su').split(',')) 
@@ -64,7 +64,7 @@ There were a lot of groups, and most of them needed to be migrated.
 
 First I dumped all groups and members into a CSV list using this command:
 
-{% highlight %}
+{% highlight console %}
     FOR /F "delims=!" %%i in ('"dsquery group -d fac.win.stanford.edu -limit 0"') DO FOR /F "delims=!" %%j in ('"dsget group %%i -d fac.win.stanford.edu -members"') DO echo %%i,%%j
 {% endhighlight %}
 
