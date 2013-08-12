@@ -10,7 +10,7 @@ VMware provide packages for Ubuntu on packages.vmware.com. The install procedure
 
 To add the repository and install the tools do:
 
-{% highlight console %}
+{% highlight shell-session %}
 apt-add-repository 'deb http://packages.vmware.com/tools/esx/4.1latest/ubuntu lucid main restricted'
 wget http://packages.vmware.com/tools/VMWARE-PACKAGING-GPG-KEY.pub -q -O- | apt-key add -
 
