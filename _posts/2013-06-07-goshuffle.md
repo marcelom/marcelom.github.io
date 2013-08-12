@@ -9,7 +9,7 @@ I am porting some Python code to [Go](http://golang.org/), and I needed to perfo
 
 Basically, I wanted something like this in Python:
 
-{% highlight go %}
+{% highlight python %}
 a = range(1,11)
 >>> a
 [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
