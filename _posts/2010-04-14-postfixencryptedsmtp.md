@@ -12,8 +12,10 @@ I use postfix extensively. This is what I did in order to enable TLS connections
 
 Edit main.cf and add the following two lines:
 
-    smtp_tls_security_level = encrypt
-    smtp_use_tls=yes
+{% highlight cfg %}
+smtp_tls_security_level = encrypt
+smtp_use_tls=yes
+{% endhighlight %}
 
 These will force all outgoing connections to be made exclusively through TLS.
 
@@ -21,7 +23,9 @@ This works well because I use Stanford SMTP servers as my smart relay (see [rela
 
 To debug the connections, use the following:
 
-    debug_peer_list = stanford.edu
-    debug_peer_level = 2
+{% highlight cfg %}
+debug_peer_list = stanford.edu
+debug_peer_level = 2
+{% endhighlight %}
 
 And then check your log files. Make sure to disable them later (just put a # in front of them) to avoid filling up your logs too quickly.
