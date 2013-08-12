@@ -25,23 +25,26 @@ I first migrated the OU structure from our domain into the newly created OU insi
 
 I dumped all the OU structure using the following command
 
-    dsquery ou "our root OU (change it to yours here)" -d fac.win.stanford.edu -limit 0
+{% highlight %}
+dsquery ou "our root OU (change it to yours here)" -d fac.win.stanford.edu -limit 0
+{% endhighlight %}
 
 That provided me a list of all teh OUs that needed to be migrated. I ran them through this python script:
 
-    a = []
-    for line in sys.stdin:
-        a.append(line.strip().replace('OU=LBRE,DC=fac','OU=LBRE,DC=su').split(',')) 
-
-    l = 6
-    while True:
-        n = [i for i in a if len(i) == l]
-        if n == []:
-            break
-        print "level %s:" % l
-        for item in n:
-            print 'dsadd ou -d su.win.stanford.edu "%s"'% ','.join(item)
-        l += 1
+{% highlight python%}
+a = []
+for line in sys.stdin:
+  a.append(line.strip().replace('OU=LBRE,DC=fac','OU=LBRE,DC=su').split(',')) 
+  l = 6
+  while True:
+    n = [i for i in a if len(i) == l]
+    if n == []:
+      break
+    print "level %s:" % l
+    for item in n:
+      print 'dsadd ou -d su.win.stanford.edu "%s"'% ','.join(item)
+    l += 1
+{% endhighlight %}
 
 The script dumps dsadd commands in a structured fashion: OU "a" is dumped before OU "a, b", otherwise the second one fails (because the underlying OU does not exist).
 
@@ -61,7 +64,9 @@ There were a lot of groups, and most of them needed to be migrated.
 
 First I dumped all groups and members into a CSV list using this command:
 
+{% highlight %}
     FOR /F "delims=!" %%i in ('"dsquery group -d fac.win.stanford.edu -limit 0"') DO FOR /F "delims=!" %%j in ('"dsget group %%i -d fac.win.stanford.edu -members"') DO echo %%i,%%j
+{% endhighlight %}
 
 A funny thing: I was tagged as an "old-schooler" by some co-workers that mentioned that "FOR /F" was an ancient thing... I do agree in some degree that it was indeed old-school, but I was able to accomplish that as a one-liner. I cant say that I was proud of myself (after all, I am a Unix person...), but I am pretty content with the results... ;-)
 
@@ -69,28 +74,30 @@ I processed this list to do some general cleanup, modified some names and OU str
 
 The VBScript is roughly like this:
 
-    On Error Resume Next
-    Const ADS_GROUP_TYPE_UNIVERSAL_GROUP = &h8
-    Const ADS_GROUP_TYPE_SECURITY_ENABLED = &h80000000
-	Const ADS_PROPERTY_APPEND = 3 
-	 
-	Set objOU = GetObject("LDAP://...,DC=su,DC=win,DC=stanford,DC=edu")
-	 
-	g = "GROUPNAMEHERE"
-	m = Array("CN=user1,OU=...,DC=win,DC=stanford,DC=edu","CN=user2,OU=...,DC=win,DC=stanford,DC=edu")
-	WScript.Echo "(" & g & "): Starting"
-	Set objGroup = objOU.Create("Group", "cn=" & g)
-	objGroup.Put "sAMAccountName", g
-	objGroup.Put "groupType", ADS_GROUP_TYPE_UNIVERSAL_GROUP Or ADS_GROUP_TYPE_SECURITY_ENABLED
-	objGroup.PutEx ADS_PROPERTY_APPEND, "member", m
-	objGroup.SetInfo
-	If Err.Number = 0 Then
-	    WScript.Echo "(" & g & "): Done"
-	Else
-	    WScript.Echo "(" & g & "): Error: " & Err.Number & ", Src: " & Err.Source & ", Desc: " & Err.Description
-	    Err.Clear
-	End If
-	WScript.Echo "(" & g & "): End"
+{% highlight vbnet %}
+On Error Resume Next
+Const ADS_GROUP_TYPE_UNIVERSAL_GROUP = &h8
+Const ADS_GROUP_TYPE_SECURITY_ENABLED = &h80000000
+Const ADS_PROPERTY_APPEND = 3 
+
+Set objOU = GetObject("LDAP://...,DC=su,DC=win,DC=stanford,DC=edu")
+
+g = "GROUPNAMEHERE"
+m = Array("CN=user1,OU=...,DC=win,DC=stanford,DC=edu","CN=user2,OU=...,DC=win,DC=stanford,DC=edu")
+WScript.Echo "(" & g & "): Starting"
+Set objGroup = objOU.Create("Group", "cn=" & g)
+objGroup.Put "sAMAccountName", g
+objGroup.Put "groupType", ADS_GROUP_TYPE_UNIVERSAL_GROUP Or ADS_GROUP_TYPE_SECURITY_ENABLED
+objGroup.PutEx ADS_PROPERTY_APPEND, "member", m
+objGroup.SetInfo
+If Err.Number = 0 Then
+    WScript.Echo "(" & g & "): Done"
+Else
+    WScript.Echo "(" & g & "): Error: " & Err.Number & ", Src: " & Err.Source & ", Desc: " & Err.Description
+    Err.Clear
+End If
+WScript.Echo "(" & g & "): End"
+{% endhighlight %}
 
 ## Conclusion
 
