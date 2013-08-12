@@ -50,7 +50,7 @@ func main() {
 
 Here is a sample output:
 
-{% highlight bash %}
+{% highlight console %}
 $ go run myshuffle.go
 [7 10 8 2 5 1 4 6 9 3]
 {% endhighlight %}
