@@ -25,7 +25,7 @@ I first migrated the OU structure from our domain into the newly created OU insi
 
 I dumped all the OU structure using the following command
 
-{% highlight console %}
+{% highlight bat %}
 dsquery ou "our root OU (change it to yours here)" -d fac.win.stanford.edu -limit 0
 {% endhighlight %}
 
@@ -64,8 +64,8 @@ There were a lot of groups, and most of them needed to be migrated.
 
 First I dumped all groups and members into a CSV list using this command:
 
-{% highlight console %}
-    FOR /F "delims=!" %%i in ('"dsquery group -d fac.win.stanford.edu -limit 0"') DO FOR /F "delims=!" %%j in ('"dsget group %%i -d fac.win.stanford.edu -members"') DO echo %%i,%%j
+{% highlight bat %}
+FOR /F "delims=!" %%i in ('"dsquery group -d fac.win.stanford.edu -limit 0"') DO FOR /F "delims=!" %%j in ('"dsget group %%i -d fac.win.stanford.edu -members"') DO echo %%i,%%j
 {% endhighlight %}
 
 A funny thing: I was tagged as an "old-schooler" by some co-workers that mentioned that "FOR /F" was an ancient thing... I do agree in some degree that it was indeed old-school, but I was able to accomplish that as a one-liner. I cant say that I was proud of myself (after all, I am a Unix person...), but I am pretty content with the results... ;-)
