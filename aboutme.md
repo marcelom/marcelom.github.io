@@ -3,7 +3,7 @@ layout: page
 title: About Me
 author: "Marcelo Moreira"
 excerpt: (Almost) All about me...
-date: 2013-05-22
+date: 2013-05-22 14:35:00
 ---
 
 My name is Marcelo Moreira. I currently work as the IT Infrastructure Manager for Stanford University.
