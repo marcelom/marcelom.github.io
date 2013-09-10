@@ -16,7 +16,7 @@ Here is what you need to do:
 
 {% highlight console %}
 ssh-keygen -b 4096 -C "YOUREMAIL@WHATEVER.COM" -f YOURFILENAMEHERE
-{% endhlight %}
+{% endhighlight %}
 
 You will get 2 files:
 
@@ -24,6 +24,6 @@ You will get 2 files:
 $ ls -la
 -rw-------  1 marcelom operator 3326 Sep  9 12:43 YOURFILENAMEHERE
 -rw-------  1 marcelom operator  745 Sep  9 12:43 YOURFILENAMEHERE.pub
-{% endhlight %}
+{% endhighlight %}
 
 Also, I HIGHLY recommend that you rotect your private key with a passphrase. It will give you much ore ease of mind in case it leaks out. Plus, it kinds of work as a 2-factor uthentication thing... The private key is the "somehing that you have", and the passhrase is the "something that you know".
