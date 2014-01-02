@@ -26,7 +26,7 @@ To decrypt, use the inverse operation:
 openssl aes-256-cbc -d -in secrets.txt.enc -out secrets.txt
 {% endhighlight %}
 
-If the message is simple enough 9like a one liner, or just a fe wones), you can even dump it to a base64 string, so that you can attach it directly to the body of an email:
+If the message is simple enough (like a one liner, or just a few ones), you can even dump it to a base64 string, so that you can attach it directly to the body of an email:
 
 {% highlight console %}
 $ echo "this is a serious secret" | openssl aes-256-cbc -base64
