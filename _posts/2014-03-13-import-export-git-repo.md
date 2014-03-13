@@ -21,7 +21,7 @@ For example, to import it on GitHub, make sure that the repository you're trying
 
 Here are all the commands written out:
 
-```
+{% highlight console %}
 # In this example, we use an external account named extuser and
 # a GitHub account named ghuser to transfer repo.git
 
@@ -35,6 +35,6 @@ git push --mirror https://github.com/ghuser/repo.git
 cd ..
 rm -rf repo.git
 # Remove temporary local repository
-```
+{% endhighlight %}
 
 Your newly imported repository should be ready to go on GitHub!
