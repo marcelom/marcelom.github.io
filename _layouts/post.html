@@ -2,11 +2,11 @@
 layout: default
 ---
 
-<div id="post">
+<section id="page" class="full-box">
 	<h1>{{ page.title }}</h1>
 	<p class="meta">
 		Posted on {{ page.date | date_to_string }} by {{ page.author }} &mdash; <a href="{{page.url}}">Permalink</a>
 	</p>
 	{{ content }}
 	{% comment %} Temporarily disabling disqus... --- {% include disqus.html %} {% endcomment %}
-</div>
+</section>
