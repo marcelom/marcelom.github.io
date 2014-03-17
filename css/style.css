@@ -1,0 +1,179 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,300);
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	font-size: 1em;
+}
+
+h1, h2, h3 {
+	margin-top: 0;
+	font-weight: 400;
+}
+
+p {
+	font-size: 1.05em;
+	color: #444;
+}
+
+a {
+	/* color: #6090b0; */
+	color: #444;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+ul {
+	padding-left: 20px;
+	display: block;
+}
+
+pre {
+	display: block;
+	background-color: #f2f2f2;
+}
+
+/* Header */
+header, nav {
+	margin-top: 26px;
+}
+
+header h1, header img {
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 1.3em;
+	font-size: 1.3em;
+	margin: 0;
+}
+
+header img {
+	margin: -4px 10px 0 0;
+}
+
+header a {
+	margin-top: 26px;
+	text-decoration: none;
+	color: #630B0B;
+	font-weight: 700;
+}
+
+/* Main Navigation */
+nav li {
+	display: inline-block;
+	list-style: none;
+	text-align: center;
+	vertical-align: middle;
+	line-height: .91em;
+	font-size: .91em;
+}
+
+nav li.twitter a {
+	padding-right: 0;
+}
+
+nav li.twitter img {
+	border-width: 0;
+}
+
+nav ul {
+	margin: 0 0 28px 0;
+	padding: 0;
+	float: right;
+}
+
+nav a {
+	text-decoration: none;
+	font-weight: 700;
+	color: #777;
+	padding: 0 25px;
+}
+
+body.home nav:after {
+	height: auto;
+	background-color: transparent;
+	content: url(img/messy.png);
+	position: absolute;
+	display: block;
+	right: 0;
+	top: 70px;
+}
+
+body.home nav {
+	position: relative;
+}
+
+/* Blog Posts */
+#blogposts, #links {
+	margin: 25px 0;
+}
+
+#blogposts:before {
+	margin-top: -25px;
+	height: 1px;
+}
+
+#blogposts ul.posts {
+	list-style-type: none;
+	padding: 0;
+	font-size: 90%;
+}
+
+#blogposts ul.posts a {
+	color: inherit;
+}
+
+#blogposts ul.posts span {
+	color: #aaa;
+	font-family: Monaco, "Courier New", monospace;
+	font-size: 75%;
+}
+
+/* Footer */
+footer {
+	font-size: .7em;
+	text-align: center;
+	margin: 70px 0 20px 0;
+}
+
+footer:before {
+	margin-top: -25px;
+	height: 1px;
+}
+
+body.home footer {
+	margin-top: 25px;
+}
+
+body.home footer:before {
+	display: none;
+}
+
+/* Grey Background - General Styles */
+#blogposts:before, footer:before {
+	display: block;
+	content: "";
+	background-color: #EDEDED;
+	position: absolute;
+	left: 0;
+	right: 0;
+	z-index: -1;
+	width: 100%;
+}
+
+@media handheld and (max-width: 480px) , screen and (max-device-width: 480px) , screen and (max-width: 600px) {
+	body.home nav:after {
+		display: none
+	}
+	header, nav {
+		text-align: center
+	}
+	nav ul {
+		float: none
+	}
+	nav a {
+		padding: 0 25px 0 0
+	}
+}
