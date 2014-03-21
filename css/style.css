@@ -26,6 +26,11 @@ a:hover {
 	text-decoration: underline;
 }
 
+code {
+	display: inherit;
+	border: 0;
+}
+
 ul {
 	padding-left: 20px;
 	display: block;
