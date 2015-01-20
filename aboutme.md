@@ -6,7 +6,7 @@ excerpt: (Almost) All about me...
 date: 2013-05-22 14:35:00
 ---
 
-My name is Marcelo Moreira. I currently work as a Cloud DevOps Engineer for Sony Network Entertainment International, most specifically for Plaustation 4 Infrastructure.
+My name is Marcelo Moreira. I currently work as a Cloud DevOps Engineer for Sony Network Entertainment International, most specifically for [Playstation 4](http://www.playstation.com) Infrastructure.
 
 If you're reading this, you're probably a friend whom I somehow managed to trick or coerced into giving me some page hits ;-)
 
